@@ -1,11 +1,11 @@
 class Obstacle {
   
-  int w, h;
+  int _width, _height;
   PVector position, velocity;
   
-  Obstacle(float x, float y, int wi, int he, int dir){
-    w = wi;
-    h = he;
+  Obstacle(float x, float y, int width, int height, int dir){
+    _width = width;
+    _height = height;
     position = new PVector(x, y);
     velocity = new PVector(dir, 0);
   }
@@ -17,7 +17,11 @@ class Obstacle {
   void display(){
    rectMode(CENTER);
    fill(0, 0, 255);
-   rect(position.x, position.y, w, h);
+   rect(position.x, position.y, _width, _height);
+  }
+  
+  boolean touchingFrog()Frog f{
+   
   }
   
 }
